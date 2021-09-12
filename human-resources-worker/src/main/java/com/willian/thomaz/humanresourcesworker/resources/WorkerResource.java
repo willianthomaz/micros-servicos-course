@@ -1,7 +1,7 @@
 package com.willian.thomaz.humanresourcesworker.resources;
 
 import com.willian.thomaz.humanresourcesworker.entities.Worker;
-import com.willian.thomaz.humanresourcesworker.repositories.Workerrepository;
+import com.willian.thomaz.humanresourcesworker.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ import java.util.List;
 public class WorkerResource {
 
     @Autowired
-    private Workerrepository repository;
+    private WorkerRepository repository;
 
     @GetMapping
     public ResponseEntity<List<Worker>> findAll() {
